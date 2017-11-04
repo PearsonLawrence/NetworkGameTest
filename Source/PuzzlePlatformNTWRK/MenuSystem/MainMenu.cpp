@@ -17,7 +17,12 @@ bool UMainMenu::Initialize()
 
 void UMainMenu::HostServer()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Host a Server"));
+	if (MenuInterface != nullptr)
+	{
+		MenuInterface->Host();
+		
+	}
+
 }
 void UMainMenu::JoinServer()
 {
